@@ -3,14 +3,14 @@ class Player
   def hand
     puts "数字を入力してください。"
     puts "0:グー\n1:チョキ\n2:パー"
-      input_hand = gets.to_i
+      input_hand = gets.chomp
        while true
-        if input_hand == 0 || input_hand == 1 ||input_hand == 2
-          return input_hand
+        if input_hand == "0" || input_hand == "1" ||input_hand == "2"
+          return input_hand.to_i
         else
            puts "もう一度数字を入力してください。"
            puts "0:グー\n1:チョキ\n2:パー"
-           input_hand = gets.to_i
+           input_hand = gets.chomp
         end
        end
   end
